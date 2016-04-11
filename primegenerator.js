@@ -2,7 +2,6 @@ var num = 0;
 var df = 1;
 var done = false;
 var prime = false;
-
 function start() {
     while (1 === 1) {
         nextprime();
@@ -61,3 +60,5 @@ function addtolist(data) {
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
 }
+
+start();
