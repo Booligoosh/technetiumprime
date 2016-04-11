@@ -47,6 +47,14 @@ function checkprime() {
         }
 }
     if (prime === true) {
-        println(num)
+        //println(num)
+        addtolist(num)
     }
+}
+
+function addtolist(data) {
+    var li = document.createElement("LI");
+    var t = document.createTextNode(data);
+    li.appendChild(t);
+    document.getElementById("primelist").appendChild(li);
 }
