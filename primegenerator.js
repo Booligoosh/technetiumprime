@@ -3,8 +3,14 @@ var df = 1;
 var done = false;
 var prime = false;
 
-setTimer(nextprime,0);
+start();
+
+function start() {
+    while (1 === 1) {
+        nextprime();
+    }
 //println("===================");
+}
 
 function nextprime() {
     num = num + 1;
