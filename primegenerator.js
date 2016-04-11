@@ -3,8 +3,6 @@ var df = 1;
 var done = false;
 var prime = false;
 
-start();
-
 function start() {
     while (1 === 1) {
         nextprime();
