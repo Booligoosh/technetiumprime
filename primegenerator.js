@@ -21,7 +21,7 @@ function checkprime() {
     num = num;
     done = false;
     prime = false;
-    for (df = 1; done === false && num - df > 1; df = df + 1) {
+    for (df = Math.floor(Math.sqrt(num)); done === false && num - df > 1; df = df + 1) {
         //if evenly divisible
         if (num / (num - df) % 1 != 0) {
             prime = true;
