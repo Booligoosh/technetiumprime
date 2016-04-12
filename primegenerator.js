@@ -2,7 +2,8 @@ var num = 0;
 var df = 1;
 var done = false;
 var prime = false;
-println(2);
+var primecount = 0;
+addtolist(2);
 start();
 function start() {
 
@@ -63,4 +64,5 @@ function addtolist(data) {
     var t = document.createTextNode(data);
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
+    document.getElementById("primecount").innerHTML = primecount;
 }
