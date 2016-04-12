@@ -2,14 +2,17 @@ var num = 0;
 var df = 1;
 var done = false;
 var prime = false;
+start();
 function start() {
-    while (1 === 1) {
-        nextprime();
-    }
-//println("===================");
+
+    x = 0;  // 0 Seconds
+
+    nextprime()
+    setTimeout(start, x*1000);
 }
 
 function nextprime() {
+
     num = num + 1;
     checkprime();
 }
@@ -31,7 +34,7 @@ function checkprime() {
             //println("num: " + num);
             //println("ed");
             //println(prime);
-            //println("==================="); 
+            //println("===================");
             
         }
         //if not evenly divisible
@@ -60,5 +63,3 @@ function addtolist(data) {
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
 }
-
-start();
