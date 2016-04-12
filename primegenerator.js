@@ -1,4 +1,4 @@
-var num = 0;
+var num = 1;
 var df = 1;
 var done = false;
 var prime = false;
@@ -15,7 +15,7 @@ function start() {
 
 function nextprime() {
 
-    num = num + 1;
+    num = num + 2;
     checkprime();
 }
 
