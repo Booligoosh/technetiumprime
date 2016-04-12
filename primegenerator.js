@@ -60,6 +60,7 @@ function checkprime() {
 }
 
 function addtolist(data) {
+    primecount = primecount + 1;
     var li = document.createElement("LI");
     var t = document.createTextNode(data);
     li.appendChild(t);
