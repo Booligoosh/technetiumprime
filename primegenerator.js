@@ -2,6 +2,7 @@ var num = 0;
 var df = 1;
 var done = false;
 var prime = false;
+println(2);
 start();
 function start() {
 
