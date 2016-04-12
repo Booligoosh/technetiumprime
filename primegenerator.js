@@ -64,5 +64,5 @@ function addtolist(data) {
     var t = document.createTextNode(data);
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
-    document.getElementById("primecount").innerHTML = primecount;
+    document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
 }
