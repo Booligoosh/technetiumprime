@@ -1,3 +1,3 @@
 ![TechnetiumPrime](http://booligoosh.github.io/technetiumprime/technetium.png)
-# ARGARGARGARGARH! >:*(
-a prime number generator
+# TechnetiumPrime
+A prime number generator made using JavaScript.
