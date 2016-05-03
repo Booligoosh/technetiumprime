@@ -3,6 +3,7 @@ var df = 1;
 var done = false;
 var prime = false;
 var primecount = 0;
+var testNumSqurt;
 var primes = ["filler"]
 addtolist(2);
 start();
@@ -18,15 +19,16 @@ function nextprime() {
 }
 
 function checkprime() {
+    testNumSqurt = sqrt(num);
     num = num;
     done = false;
     prime = false;
-    for (df = 0; done === false && primes.[primes.length - df] > 1; df = df + 1) {
+    for (df = 0; done === false && primes.[df] < testNumSqurt; df = df + 1) {
     
     
     
         //if evenly divisible
-        if (num / primes.[primes.length - df] % 1 != 0) {
+        if (num / primes.[df] % 1 != 0) {
             prime = true;
             done = false;
             
