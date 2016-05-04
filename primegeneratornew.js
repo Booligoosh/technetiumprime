@@ -24,7 +24,7 @@ function checkprime() {
     testNumSqurt = Math.sqrt(num);
     done = false;
     prime = false;
-    for (df = 0; done === false && primes.[df] < testNumSqurt; df = df + 1) {
+    for (df = 1; done === false && primes.[df] < testNumSqurt; df = df + 1) {
 
         //if evenly divisible
         if (num / primes.[df] % 1 != 0) {
