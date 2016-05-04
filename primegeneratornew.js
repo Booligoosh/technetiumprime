@@ -4,12 +4,12 @@ var done = false;
 var prime = false;
 var primecount = 0;
 var testNumSqurt;
-var primes = ["filler"]
+var primes = ["filler"];
 addtolist(2);
 start();
 function start() {
     x = 0;  // 0 Seconds
-    nextprime()
+    nextprime();
     setTimeout(start, x*1000);
 }
 
