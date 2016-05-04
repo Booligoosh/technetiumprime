@@ -44,10 +44,10 @@ function checkprime() {
 
 function addtolist(data) {
     primecount = primecount + 1;
-    primes.push(data);
     var li = document.createElement("LI");
     var t = document.createTextNode(data);
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
     document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
+    primes.push(data);
 }
