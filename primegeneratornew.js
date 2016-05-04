@@ -20,7 +20,7 @@ function nextprime() {
 
 function checkprime() {
     num = num;
-    testNumSqurt = sqrt(num);
+    testNumSqurt = Math.sqrt(num);
     done = false;
     prime = false;
     for (df = 0; done === false && primes.[df] < testNumSqurt; df = df + 1) {
