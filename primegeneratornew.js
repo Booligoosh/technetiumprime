@@ -19,14 +19,12 @@ function nextprime() {
 }
 
 function checkprime() {
-    testNumSqurt = sqrt(num);
     num = num;
+    testNumSqurt = sqrt(num);
     done = false;
     prime = false;
     for (df = 0; done === false && primes.[df] < testNumSqurt; df = df + 1) {
-    
-    
-    
+
         //if evenly divisible
         if (num / primes.[df] % 1 != 0) {
             prime = true;
