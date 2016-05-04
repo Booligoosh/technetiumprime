@@ -1,4 +1,4 @@
-var num = 1;
+var num = 3;
 var df = 1;
 var done = false;
 var prime = false;
@@ -6,6 +6,7 @@ var primecount = 0;
 var testNumSqurt = 0;
 var primes = ["filler"];
 addtolist(2);
+addtolist(3);
 start();
 function start() {
     var x = 0;  // 0 Seconds
