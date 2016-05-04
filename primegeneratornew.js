@@ -3,7 +3,7 @@ var df = 1;
 var done = false;
 var prime = false;
 var primecount = 0;
-var testNumSqurt;
+var testNumSqurt = 0;
 var primes = ["filler"];
 addtolist(2);
 start();
