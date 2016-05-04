@@ -8,7 +8,7 @@ var primes = ["filler"];
 addtolist(2);
 start();
 function start() {
-    x = 0;  // 0 Seconds
+    var x = 0;  // 0 Seconds
     nextprime();
     setTimeout(start, x*1000);
 }
