@@ -8,13 +8,13 @@ if (document.cookie === "") {
     var primes = ["filler"];
 }
 else {
-    var num = getCookie("num");
+    var num = getCookie("numC");
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = getCookie("primecount");
+    var primecount = getCookie("primecountC");
     var testNumSqurt = 0;
-    var primes = getCookie("primes").split(',');
+    var primes = getCookie("primesC").split(',');
 }
 addtolist(2);
 addtolist(3);
@@ -30,7 +30,7 @@ function nextprime() {
     ///clear cookies
     document.cookie = "zzz=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     //set cookies
-    setCookie("num",num,365);
+    setCookie("numC",num,365);
     checkprime();
 }
 
@@ -71,8 +71,8 @@ function addtolist(data) {
     //clear cookies
     document.cookie = "zzz=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     //set cookies
-    setCookie("primes",primes.join(),365);
-    setCookie("primecount",primecount,365);
+    setCookie("primesC",primes.join(),365);
+    setCookie("primecountC",primecount,365);
 }
 
 function setCookie(cname, cvalue, exdays) {
