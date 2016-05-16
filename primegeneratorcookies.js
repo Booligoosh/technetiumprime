@@ -37,7 +37,7 @@ function nextprime() {
 function checkprime() {
     num = num;
     testNumSqurt = Math.sqrt(num);
-    done = false;s
+    done = false;
     prime = false;
     for (df = 1; done === false && primes[df] < testNumSqurt; df = df + 1) {
 
