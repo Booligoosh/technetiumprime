@@ -14,7 +14,7 @@ else {
     var prime = false;
     var primecount = getCookie("primecount");
     var testNumSqurt = 0;
-    var primes = getCookie("primes");
+    var primes = getCookie("primes").split(',');
 }
 addtolist(2);
 addtolist(3);
