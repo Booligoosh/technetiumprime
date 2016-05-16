@@ -8,7 +8,7 @@ if (document.cookie === "") {
     var primes = ["filler"];
 }
 else {
-    var cookiesList = document.cookie.split(|);
+    var cookiesList = document.cookie.split("|");
     var num = cookiesList[1];
     var df = 1;
     var done = false;
