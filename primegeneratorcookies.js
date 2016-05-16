@@ -28,7 +28,7 @@ function start() {
 function nextprime() {
     num = num + 2;
     ///clear cookies
-    document.cookie = "zzz=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "";
     //set cookies
     setCookie("numC",num,365);
     checkprime();
@@ -69,7 +69,7 @@ function addtolist(data) {
     document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
     primes.push(data);
     //clear cookies
-    document.cookie = "zzz=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "";
     //set cookies
     setCookie("primesC",primes.join(),365);
     setCookie("primecountC",primecount,365);
