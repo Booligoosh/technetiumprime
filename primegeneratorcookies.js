@@ -8,11 +8,11 @@ if (document.cookie === "") {
     var primes = ["filler"];
 }
 else {
-    var num = getCookie("numC");
+    var num = Number(getCookie("numC"));
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = getCookie("primecountC");
+    var primecount = Number(getCookie("primecountC"));
     var testNumSqurt = 0;
     var primes = getCookie("primesC").split(',');
 }
