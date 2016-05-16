@@ -34,7 +34,7 @@ function nextprime() {
 function checkprime() {
     num = num;
     testNumSqurt = Math.sqrt(num);
-    done = false;
+    done = false;s
     prime = false;
     for (df = 1; done === false && primes[df] < testNumSqurt; df = df + 1) {
 
@@ -65,7 +65,7 @@ function addtolist(data) {
     document.getElementById("primeslist").appendChild(li);
     document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
     primes.push(data);
-    setCookie("primes",primes[],365);
+    setCookie("primes",primes.join(),365);
     setCookie("primecount",primecount,365);
 }
 
