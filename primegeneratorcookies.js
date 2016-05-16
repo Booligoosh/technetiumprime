@@ -8,13 +8,14 @@ if (document.cookie === "") {
     var primes = ["filler"];
 }
 else {
-    var num = Number(getCookie("numC"));
+    var cookiesList = document.cookie.split(|);
+    var num = cookiesList[1];
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = Number(getCookie("primecountC"));
+    var primecount = cookiesList[2];
     var testNumSqurt = 0;
-    var primes = getCookie("primesC").split(',');
+    var primes = cookiesList[3].split(',');
 }
 addtolist(2);
 addtolist(3);
@@ -28,9 +29,6 @@ function start() {
 function nextprime() {
     num = num + 2;
     ///clear cookies
-    document.cookie = "";
-    //set cookies
-    setCookie("numC",num,365);
     checkprime();
 }
 
@@ -58,6 +56,10 @@ function checkprime() {
     }
 }
 
+function save() {
+    document.cookie = "cookies= |" + num + "|" + primecount + "|" + primes.join();
+}
+
 //the following functions have been taken or modified from http://www.w3schools.com/
 
 function addtolist(data) {
@@ -68,11 +70,7 @@ function addtolist(data) {
     document.getElementById("primeslist").appendChild(li);
     document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
     primes.push(data);
-    //clear cookies
-    document.cookie = "";
-    //set cookies
-    setCookie("primesC",primes.join(),365);
-    setCookie("primecountC",primecount,365);
+    save();
 }
 
 function setCookie(cname, cvalue, exdays) {
