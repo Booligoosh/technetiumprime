@@ -17,10 +17,11 @@ else {
     var prime = false;
     var primecount = Number(cookiesList[2]);
     var testNumSqurt = 0;
+    //must use Number() whenever referring to a value of primes[]
     var primes = cookiesList[3].split(',');
     var addListI = 0;
     while (addListI <= primes.length) {
-        addtolist(primes[addListI]);
+        rawListAdd(Number(primes[addListI]));
         addListI = addListI + 1;
     }
 }
@@ -43,10 +44,10 @@ function checkprime() {
     testNumSqurt = Math.sqrt(num);
     done = false;
     prime = false;
-    for (df = 1; done === false && primes[df] < testNumSqurt; df = df + 1) {
+    for (df = 1; done === false && Number(primes[df] < testNumSqurt; df = df + 1)) {
 
         //if evenly divisible
-        if (num / primes[df] % 1 != 0) {
+        if (num / Number(primes[df]) % 1 != 0) {
             prime = true;
             done = false;
             
@@ -70,13 +71,17 @@ function save() {
 
 function addtolist(data) {
     primecount = primecount + 1;
+    rawListAdd(data);
+    primes.push(data);
+    save();
+}
+
+function rawListAdd (data) {
     var li = document.createElement("LI");
     var t = document.createTextNode(data);
     li.appendChild(t);
     document.getElementById("primeslist").appendChild(li);
     document.getElementById("primecount").innerHTML = primecount + " primes calculated so far";
-    primes.push(data);
-    save();
 }
 
 function setCookie(cname, cvalue, exdays) {
