@@ -6,6 +6,8 @@ if (document.cookie === "") {
     var primecount = 0;
     var testNumSqurt = 0;
     var primes = ["filler"];
+    addtolist(2);
+    addtolist(3);
 }
 else {
     var cookiesList = document.cookie.split("|");
@@ -17,8 +19,6 @@ else {
     var testNumSqurt = 0;
     var primes = cookiesList[3].split(',');
     var addListI = 0;
-    addtolist(2);
-    addtolist(3);
     while (addListI <= primes.length) {
         addtolist(primes[addListI]);
         addListI = addListI + 1;
