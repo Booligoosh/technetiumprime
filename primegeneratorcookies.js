@@ -9,16 +9,22 @@ if (document.cookie === "") {
 }
 else {
     var cookiesList = document.cookie.split("|");
-    var num = cookiesList[1];
+    var num = Number(cookiesList[1]);
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = cookiesList[2];
+    var primecount = Number(cookiesList[2]);
     var testNumSqurt = 0;
     var primes = cookiesList[3].split(',');
+    var addListI = 0;
+    addtolist(2);
+    addtolist(3);
+    while (addListI <= primes.length) {
+        addtolist(primes[addListI]);
+        addListI = addListI + 1;
+    }
 }
-addtolist(2);
-addtolist(3);
+
 start();
 function start() {
     var x = 0;  // 0 Seconds
