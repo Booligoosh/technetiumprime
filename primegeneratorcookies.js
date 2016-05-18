@@ -67,14 +67,20 @@ function save() {
     document.cookie = "cookies= |" + num + "|" + primecount + "|" + primes.join();
 }
 
-//the following functions have been taken or modified from http://www.w3schools.com/
-
 function addtolist(data) {
     primecount = primecount + 1;
     rawListAdd(data);
     primes.push(data);
-    save();
+    //save();
 }
+
+//the following functions have been taken or modified from http://www.w3schools.com/
+
+body.onbeforeunload=function(){
+    save();
+    alert("Your primes have been saved.");
+};
+
 
 function rawListAdd (data) {
     var li = document.createElement("LI");
