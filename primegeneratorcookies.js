@@ -76,11 +76,13 @@ function addtolist(data) {
 
 //the following functions have been taken or modified from http://www.w3schools.com/
 
+
+/*
 body.onbeforeunload=function(){
     save();
     alert("Your primes have been saved.");
 };
-
+*/
 
 function rawListAdd (data) {
     var li = document.createElement("LI");
