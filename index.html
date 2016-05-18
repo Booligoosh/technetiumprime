@@ -53,9 +53,27 @@
     <h1>Prime Generator</h1>
     <div id="tools">
       <h2 id="primecount"></h2>
-      <input type="file" id="upload" onchange="" accept=".csv">Upload CSV</input>
-      <input type="file" id="download" onchange="" accept=".csv">Save CSV</input>
-    </div>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <h2>Upload CSV</h2>
+            </td>
+            <td>
+              <input type="file" id="upload" onchange="" accept=".csv">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Save CSV</h2>
+            </td>
+            <td>
+              <button id="download">Save CSV</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
     <h3>Primes:</h3>
     <ul id ="primeslist">
       
