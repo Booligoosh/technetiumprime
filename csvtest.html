@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>TechnetiumPrime</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="http://booligoosh.github.io/technetiumprime/z-icon-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://booligoosh.github.io/technetiumprime/z-icon-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://booligoosh.github.io/technetiumprime/z-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://booligoosh.github.io/technetiumprime/z-icon-144.png" />
+    <link rel="icon" type="image/png" href="http://booligoosh.github.io/technetiumprime/TechnetiumATI.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Primes">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      body {
+        background-image: url('http://booligoosh.github.io/w-background.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+        text-align: right;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+      #tools {
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        background-color: rgba(194, 166, 255, 0.5);
+      }
+      td {
+        text-align: left;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        font-size: 50px;
+      }
+      h1, h3, ul {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body onbeforeunload="save()">
+    <img src="http://booligoosh.github.io/technetiumprime/technetium.png">
+    <h1>Prime Generator</h1>
+    <div id="tools">
+      <h2 id="primecount"></h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <h2>Upload CSV</h2>
+            </td>
+            <td>
+              <input type="file" id="upload" onchange="" accept=".csv">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Save CSV</h2>
+            </td>
+            <td>
+              <button id="download">Save CSV</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+    <h3>Primes:</h3>
+    <ul id ="primeslist">
+      
+    </ul>
+    <script src="http://booligoosh.github.io/technetiumprime/primegeneratorcookies.js"></script>
+  </body>
+</html>
