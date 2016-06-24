@@ -1,3 +1,9 @@
+if (typeof(Storage) !== "undefined") {
+    // Code for localStorage/sessionStorage.
+} else {
+    alert("You are not using an awesome browser.\nThis means that we cannot save your primes you generate :(\nTo be able to save your primes, use a supported browser such as Chrome or Firefox.");
+}
+
 if (localStorage.length === 0) {
     var num = 3;
     var df = 1;
@@ -63,9 +69,13 @@ function checkprime() {
 }
 
 function save() {
-    localStorage.sNum = num;
-    localStorage.sPrimecount = primecount;
-    localStorage.sPrimes = primes.join();
+    if (typeof(Storage) !== "undefined") {
+        localStorage.sNum = num;
+        localStorage.sPrimecount = primecount;
+        localStorage.sPrimes = primes.join();
+    } else {
+        //cannot save primes :(
+    }
 }
 
 function addtolist(data) {
