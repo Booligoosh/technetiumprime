@@ -18,7 +18,7 @@ else {
     var testNumSqurt = 0;
     //must use Number() whenever referring to a value of primes[]
     var primes = localStorage.sPrimes.split(',');
-    var addListI = 0;
+    var addListI = 1;
     while (addListI <= primes.length) {
         rawListAdd(Number(primes[addListI]));
         addListI = addListI + 1;
