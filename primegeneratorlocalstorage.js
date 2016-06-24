@@ -1,4 +1,4 @@
-if (document.cookie === "") {
+if (localStorage.toString() === "Storage {length: 0}") {
     var num = 3;
     var df = 1;
     var done = false;
@@ -10,15 +10,14 @@ if (document.cookie === "") {
     addtolist(3);
 }
 else {
-    var cookiesList = document.cookie.split("|");
-    var num = Number(cookiesList[1]);
+    var num = Number(localStorage.sNum);
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = Number(cookiesList[2]);
+    var primecount = Number(localStorage.sPrimecount);
     var testNumSqurt = 0;
     //must use Number() whenever referring to a value of primes[]
-    var primes = cookiesList[3].split(',');
+    var primes = localStorage.sPrimes.split(',');
     var addListI = 0;
     while (addListI <= primes.length) {
         rawListAdd(Number(primes[addListI]));
@@ -64,14 +63,16 @@ function checkprime() {
 }
 
 function save() {
-    document.cookie = "cookies= |" + num + "|" + primecount + "|" + primes.join();
+    localStorage.sNum = num;
+    localStorage.sPrimecount = primecount;
+    localStorage.sPrimes = primes.join();
 }
 
 function addtolist(data) {
     primecount = primecount + 1;
     rawListAdd(data);
     primes.push(data);
-    //save();
+    save();
 }
 
 //the following functions have been taken or modified from http://www.w3schools.com/
