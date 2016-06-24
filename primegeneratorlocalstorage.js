@@ -1,4 +1,4 @@
-if (localStorage === Storage {length: 0}) {
+if (localStorage.length === 0) {
     var num = 3;
     var df = 1;
     var done = false;
