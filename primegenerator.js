@@ -4,7 +4,7 @@ if (typeof(Storage) !== "undefined") {
     alert("You are not using an awesome browser.\nThis means that we cannot save your primes you generate :(\nTo be able to save your primes, use a supported browser such as Chrome or Firefox.");
 }
 
-if (localStorage.length === 0) {
+if (localStorage.primes == undefined) {
     var num = 3;
     var df = 1;
     var done = false;
@@ -16,14 +16,14 @@ if (localStorage.length === 0) {
     addtolist(3);
 }
 else {
-    var num = Number(localStorage.sNum);
+    var num = Number(localStorage.primesNum);
     var df = 1;
     var done = false;
     var prime = false;
-    var primecount = Number(localStorage.sPrimecount);
+    var primecount = Number(localStorage.primesPrimecount);
     var testNumSqurt = 0;
     //must use Number() whenever referring to a value of primes[]
-    var primes = localStorage.sPrimes.split(',');
+    var primes = localStorage.primesPrimes.split(',');
     var addListI = 1;
     while (addListI <= primes.length) {
         rawListAdd(Number(primes[addListI]));
@@ -70,9 +70,9 @@ function checkprime() {
 
 function save() {
     if (typeof(Storage) !== "undefined") {
-        localStorage.sNum = num;
-        localStorage.sPrimecount = primecount;
-        localStorage.sPrimes = primes.join();
+        localStorage.primesNum = num;
+        localStorage.primesPrimecount = primecount;
+        localStorage.primesPrimes = primes.join();
     } else {
         //cannot save primes :(
     }
