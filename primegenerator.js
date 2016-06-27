@@ -75,6 +75,9 @@ function addtolist(data) {
     rawListAdd(data);
     primes.push(data);
     save();
+    if (document.getElementById("autoscroll").checked === true) {
+        window.scrollTo(0, 99999999999999999999999999999999999);
+    }
 }
 
 //the following functions have been taken or modified from http://www.w3schools.com/
