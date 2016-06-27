@@ -5,6 +5,7 @@ if (typeof(Storage) !== "undefined") {
 }
 
 if (localStorage.primes == undefined) {
+    localStorage.primes = true;
     var num = 3;
     var df = 1;
     var done = false;
