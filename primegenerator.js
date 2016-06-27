@@ -50,7 +50,7 @@ function checkprime() {
     testNumSqurt = Math.sqrt(num);
     done = false;
     prime = false;
-    for (df = 1; done === false && Number(primes[df]) < testNumSqurt; df = df + 1) {
+    for (df = 1; done === false && Number(primes[df]) < num; df = df + 1) {
 
         //if evenly divisible
         if (num / Number(primes[df]) % 1 != 0) {
