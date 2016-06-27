@@ -7,22 +7,14 @@ if (typeof(Storage) !== "undefined") {
 if (localStorage.primes == undefined) {
     localStorage.primes = true;
     var num = 3;
-    var df = 1;
-    var done = false;
-    var prime = false;
     var primecount = 0;
-    var testNumSqurt = 0;
     var primes = ["filler"];
     addtolist(2);
     addtolist(3);
 }
 else {
     var num = Number(localStorage.primesNum);
-    var df = 1;
-    var done = false;
-    var prime = false;
     var primecount = Number(localStorage.primesPrimecount);
-    var testNumSqurt = 0;
     //must use Number() whenever referring to a value of primes[]
     var primes = localStorage.primesPrimes.split(',');
     var addListI = 1;
@@ -41,19 +33,18 @@ function start() {
 
 function nextprime() {
     num = num + 2;
-    ///clear cookies
-    checkprime();
+    checkprime(num);
 }
 
-function checkprime() {
-    num = num;
-    testNumSqurt = Math.sqrt(num);
-    done = false;
-    prime = false;
-    for (df = 1; done === false && Number(primes[df]) < num; df = df + 1) {
+function checkprime(value) {
+    var testNumSqurt = Math.sqrt(value);
+    var done = false;
+    var prime = false;
+    var df = 1;
+    for (df = 1; done === false && Number(primes[df]) < value; df = df + 1) {
 
         //if evenly divisible
-        if (num / Number(primes[df]) % 1 != 0) {
+        if (value / Number(primes[df]) % 1 != 0) {
             prime = true;
             done = false;
             
@@ -65,7 +56,7 @@ function checkprime() {
         }
     }
     if (prime === true) {
-        addtolist(num);
+        addtolist(value);
     }
 }
 
